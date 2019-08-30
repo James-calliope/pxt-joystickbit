@@ -34,7 +34,9 @@ enum JoystickButtons {
  */
 //% weight=10 color=#DF6721 icon="\uf11b" block="joystickBit"
 namespace joystickBit {
-    let PIN_INIT = 0;
+    
+    let calX: number = 518;
+    let calY: number = 518;
     
     //% shim=gamerpad::init
     function init(): void {
@@ -44,7 +46,6 @@ namespace joystickBit {
     function PinInit(): void {
         // pins.setPull(DigitalPin.P1, PinPullMode.PullNone);
         // pins.setPull(DigitalPin.P2, PinPullMode.PullNone);
-        PIN_INIT = 1;
         return;
     }
 
@@ -85,7 +86,7 @@ namespace joystickBit {
     //% weight=70
     //% blockId=joystickBit_JoystickX block="read Joystick X value"
     export function joystickX(): number {
-        return pins.analogReadPin(AnalogPin.P0);
+        return pins.analogReadPin(AnalogPin.P0) - calX;
     }
 
     /**
@@ -94,7 +95,17 @@ namespace joystickBit {
     //% weight=70
     //% blockId=joystickBit_JoystickY block="read Joystick Y value"
     export function joystickY(): number {
-        return pins.analogReadPin(AnalogPin.P1);
+        return pins.analogReadPin(AnalogPin.P1) - calY;
+    }
+
+    /**
+     * Calibrate Joystick X & Y center position
+     */
+    //% weight=70
+    //% blockId=joystickBit_CalibrateJoystick block="Calibrate joystick |%xx|and |%yy| center position"
+    export function calibrateJoystick(xx: number, yy: number) {
+        calX = xx;
+        calY = yy;
     }
 
     // /**
