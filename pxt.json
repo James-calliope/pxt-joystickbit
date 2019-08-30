@@ -1,0 +1,17 @@
+{
+    "name": "joystickBit",
+    "version": "0.0.0",
+    "description": "Joystick:Bit from eleckfreaks",
+    "license": "GNU",
+    "dependencies": {
+        "core": "*"
+    },
+    "files": [
+        "README.md",
+        "main.ts"
+    ],
+    "testFiles": [
+        "test.ts"
+    ],
+    "public": false
+}
