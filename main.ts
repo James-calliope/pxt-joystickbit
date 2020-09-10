@@ -11,9 +11,9 @@
  */
 
 enum JoystickButtons {
-    //% block="Button A"
+    //% block="按钮A"
     BUTTON_A,// = DAL.MICROBIT_BUTTON_EVT_DOWN,
-    //% block="Button B"
+    //% block="按钮B"
     BUTTON_B,// = DAL.MICROBIT_BUTTON_EVT_DOWN,
     //% block="Button C"
     BUTTON_C,// = DAL.MICROBIT_BUTTON_EVT_DOWN,
