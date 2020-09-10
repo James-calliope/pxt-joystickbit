@@ -32,7 +32,7 @@ enum JoystickButtons {
 /**
  * Functions for JoystickBit.
  */
-//% weight=10 color=#DF6721 icon="\uf11b" block="joystickBit"
+//% weight=10 color=#DF6981 icon="\uf11b" block="摇杆模块"
 namespace joystickBit {
     
     let calX: number = 518;
@@ -84,7 +84,7 @@ namespace joystickBit {
      * Read X value of Joystick
      */
     //% weight=70
-    //% blockId=joystickBit_JoystickX block="read Joystick X value"
+    //% blockId=joystickBit_JoystickX block="读取摇杆X值"
     export function joystickX(): number {
         return pins.analogReadPin(AnalogPin.P1) - calX;
     }
@@ -93,7 +93,7 @@ namespace joystickBit {
      * Read Y value of Joystick
      */
     //% weight=70
-    //% blockId=joystickBit_JoystickY block="read Joystick Y value"
+    //% blockId=joystickBit_JoystickY block="读取摇杆Y值"
     export function joystickY(): number {
         return pins.analogReadPin(AnalogPin.P2) - calY;
     }
@@ -102,7 +102,7 @@ namespace joystickBit {
      * Calibrate Joystick X & Y center position
      */
     //% weight=70
-    //% blockId=joystickBit_CalibrateJoystick block="Calibrate joystick |%xx|and |%yy| center position"
+    //% blockId=joystickBit_CalibrateJoystick block="校准摇杆 |%xx|and |%yy| 中点"
     export function calibrateJoystick(xx: number, yy: number) {
         calX = xx;
         calY = yy;
