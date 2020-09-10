@@ -86,7 +86,7 @@ namespace joystickBit {
     //% weight=70
     //% blockId=joystickBit_JoystickX block="read Joystick X value"
     export function joystickX(): number {
-        return pins.analogReadPin(AnalogPin.P0) - calX;
+        return pins.analogReadPin(AnalogPin.P1) - calX;
     }
 
     /**
